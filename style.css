@@ -26,7 +26,6 @@ body {
 .container {
     display: grid;
     grid-template-rows: auto repeat(6, 100vh) auto;
-    /* overflow-y: scroll; */
     min-height: 100vh;
 }
 
@@ -127,7 +126,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    /* image is at the bottom */
 }
 
 /* Background behind the image */
@@ -145,7 +143,6 @@ body {
 
 }
 
-/* The image */
 .main-page-image {
     width: 350px;
     z-index: 1;
