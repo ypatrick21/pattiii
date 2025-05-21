@@ -10,9 +10,9 @@ body {
     background-color: #1B1F25;
     --primary-color: #FF004F;
     --main-background: #1B1F25;
-    --primary-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03),
+    --primary-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2),
         /* thin outline */
-        0 20px 40px rgba(0, 0, 0, 0.6);
+        0 5px 10px rgba(113, 113, 113, 0.6);
     /* deep shadow */
 }
 
@@ -267,15 +267,6 @@ body {
     padding: 2rem;
     text-align: center;
 }
-.d-flex{
-    display: flex;
-}
-.justify-content-center{
-    justify-content: center;
-}
-.align-items-center{
-    align-items: center;
-}
 @media only screen and (max-width:768px) {
     .container {
         grid-template-rows: auto auto auto repeat(4, 100vh) auto;
@@ -395,6 +386,14 @@ body {
         left: 0;
         right: 0;
     }
+    .about-content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .about-left, .about-right{
+        flex:auto;
+    }
 }
 .header-section{
     text-align: center;
@@ -419,7 +418,6 @@ body {
 .about-content{
     margin-top: 2rem;
     display: flex;
-    flex-direction: row;
     gap: 10px;
 }
 .about-left, .about-right{
