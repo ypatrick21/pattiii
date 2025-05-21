@@ -52,6 +52,10 @@ body {
     padding: 5px;
     border-radius: 10px;
 }
+.hamburger .burgermenu.active {
+    background-color: #eee; /* change as needed */
+    color: var(--primary-color);
+  }
 
 .hamburger .burgermenu:hover {
     background-color: #eee;
@@ -266,7 +270,7 @@ body {
     text-align: center;
 }
 
-@media only screen and (max-width:560px) {
+@media only screen and (max-width:768px) {
     .container {
         grid-template-rows: auto auto repeat(5, 100vh) auto;
     }
@@ -282,11 +286,46 @@ body {
     .header-logo {
         padding: 7px;
     }
-
-    .nav-links,
     .nav-btn {
         display: none;
     }
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        right: 10px;
+        background-color: #eee;
+        width: 50%;
+        text-align: center;
+        z-index: 999;
+        padding: 1rem;
+        border-radius: 10px;
+        /* Initially hidden with transition */
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+      }
+    
+      .nav-links.show {
+        max-height: 500px; /* or any max you expect */
+        opacity: 1;
+      }
+    
+      .nav-item {
+        color: var(--main-background);
+        padding: 10px;
+        gap: 5px;
+        transform: translateY(-10px);
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+    
+      .nav-links.show .nav-item {
+        transform: translateY(0);
+        opacity: 1;
+      }
 
     .main-page {
         flex-direction: column;

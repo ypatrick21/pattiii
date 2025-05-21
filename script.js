@@ -1,39 +1,39 @@
-// const sections = document.querySelectorAll('section');
-// const navItems = document.querySelectorAll('.nav-item');
 
-// const observer = new IntersectionObserver(entries => {
-//   entries.forEach(entry => {
-//     if (entry.isIntersecting) {
-//       const id = entry.target.id;
-//       navItems.forEach(link => {
-//         link.classList.remove('active');
-//         if (link.getAttribute('href') === `#${id}`) {
-//           link.classList.add('active');
-//         }
-//       });
-//     }
-//   });
-// }, {
-//   threshold: 0.6 // adjust to trigger earlier/later
-// });
+const hamburger = document.querySelector('.hamburger');
+const burgerIcon = document.querySelector('.hamburger .burgermenu');
+const navLinks = document.getElementById('navLinks');
+const navItems = document.querySelectorAll('.nav-item');
 
-// sections.forEach(section => observer.observe(section));
+// Toggle menu and icon active state
+hamburger.addEventListener('click', function () {
+  navLinks.classList.toggle('show');
+  burgerIcon.classList.toggle('active');
+});
+
+// Close menu when nav-item is clicked and reset hamburger icon
+navItems.forEach(function (item) {
+  item.addEventListener('click', function () {
+    navLinks.classList.remove('show');
+    burgerIcon.classList.remove('active');
+  });
+});
+
 
 const backToTopButton = document.getElementById("backToTop");
 
-    // Show/hide the button on scroll
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
+// Show/hide the button on scroll
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
         backToTopButton.style.display = "block";
-      } else {
+    } else {
         backToTopButton.style.display = "none";
-      }
-    });
+    }
+});
 
-    // Scroll to top when button clicked
-    backToTopButton.addEventListener("click", () => {
-      window.scrollTo({
+// Scroll to top when button clicked
+backToTopButton.addEventListener("click", () => {
+    window.scrollTo({
         top: 0,
         behavior: "smooth"
-      });
     });
+});
