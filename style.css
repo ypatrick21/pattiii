@@ -37,6 +37,7 @@ body {
 
 #backToTop:hover {
     background-color: var(--primary-color);
+    color: #eee;
 }
 
 .hamburger {
