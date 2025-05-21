@@ -82,12 +82,9 @@ body {
 .section {
     /* scroll-snap-align: start; */
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
     padding: 2rem;
     box-sizing: border-box;
     color: #fff;
-    /* border: 1px solid white; */
 }
 
 .main-page {
@@ -270,10 +267,18 @@ body {
     padding: 2rem;
     text-align: center;
 }
-
+.d-flex{
+    display: flex;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.align-items-center{
+    align-items: center;
+}
 @media only screen and (max-width:768px) {
     .container {
-        grid-template-rows: auto auto repeat(5, 100vh) auto;
+        grid-template-rows: auto auto auto repeat(4, 100vh) auto;
     }
 
     .hamburger {
@@ -391,10 +396,50 @@ body {
         right: 0;
     }
 }
-
-/* .services{
-    
-} */
-/* section{
+.header-section{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.header-section h2{
+    font-size: 45px;
+    font-weight: 800;
+}
+.header-section p{
+    font-size: 18px;
+    font-weight: 500;
+}
+.outline{
     outline: 1px dashed red;
-} */
+}
+.about{
+    flex-direction: column;
+}
+.about-content{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.about-left, .about-right{
+    flex: 1;
+}
+.about-right{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.about-right-header{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.about-right p{
+    margin-top: 10px;
+    font-size: 18px;
+}
+.about-right h2{
+    font-weight: 700;
+    font-size: 30px;
+}
