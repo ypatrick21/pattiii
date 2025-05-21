@@ -13,7 +13,50 @@ body {
     --primary-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03),   /* thin outline */
     0 20px 40px rgba(0, 0, 0, 0.6);        /* deep shadow */
 }
+/* Floating Button Style */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #eee;
+    color: var(--main-background);
+    border: none;
+    border-radius: 15px;
+    padding: 5px;
+    font-size: 28px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease;
+  }
 
+  #backToTop:hover {
+    background-color: var(--primary-color);
+  }
+
+  /* .material-symbols-outlined {
+    font-size: 28px;
+    line-height: 1;
+  } */
+
+  .hamburger{
+    display: none
+  }
+  .hamburger .burgermenu{
+    font-size: 35px;
+    line-height: 1;
+    color: #eee;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  .hamburger .burgermenu:hover{
+    background-color: #eee;
+    color: var(--main-background);
+    border-radius: 10px;
+  }
 .primary-color {
     background-color: var(--primary-color);
 }
@@ -221,6 +264,9 @@ body {
 @media only screen and (max-width:768px) {
     .container{
         grid-template-rows: auto auto repeat(5, 100vh) auto;
+    }
+    .hamburger{
+        display: flex;
     }
     .navbar{
         padding: 1rem;
