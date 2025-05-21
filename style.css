@@ -266,7 +266,7 @@ body {
     text-align: center;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:560px) {
     .container {
         grid-template-rows: auto auto repeat(5, 100vh) auto;
     }
