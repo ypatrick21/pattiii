@@ -395,17 +395,17 @@ body {
         flex:auto;
     }
 }
-.header-section{
+.section .header-section{
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.header-section h2{
+.section .header-section h2{
     font-size: 45px;
     font-weight: 800;
 }
-.header-section p{
+.section .header-section p{
     font-size: 18px;
     font-weight: 500;
 }
@@ -450,4 +450,7 @@ body {
     width:400px;
     border-radius: 10px;
     box-shadow: var(--primary-shadow);
+}
+.services{
+    flex-direction: column;
 }
