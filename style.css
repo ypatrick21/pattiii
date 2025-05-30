@@ -398,6 +398,12 @@ body {
     .about-left .about-coverpic{
         width: 250px;
     }
+    .section .header-section h2{
+    font-size: 40px;
+    }
+    .section .header-section p{
+        font-size: 14px;
+    }
 }
 .section .header-section{
     text-align: center;
@@ -451,7 +457,7 @@ body {
     align-items: center;
 }
 .about-coverpic{
-    width:350px;
+    width:400px;
     border-radius: 10px;
     box-shadow: var(--primary-shadow);
 }
