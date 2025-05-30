@@ -394,6 +394,9 @@ body {
     .about-left, .about-right{
         flex:auto;
     }
+    .about-coverpic{
+        width: 300px;
+    }
 }
 .section .header-section{
     text-align: center;
