@@ -451,7 +451,7 @@ body {
     align-items: center;
 }
 .about-coverpic{
-    width:400px;
+    width:350px;
     border-radius: 10px;
     box-shadow: var(--primary-shadow);
 }
