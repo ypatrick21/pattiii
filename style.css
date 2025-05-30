@@ -7,13 +7,17 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #1e1f21;
+    background-color: #111111;
+    /* background-color: #1e1f21; */
     --primary-color: #FF004F;
     --main-background: #1B1F25;
     --primary-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2),
         /* thin outline */
         0 5px 10px rgba(113, 113, 113, 0.6);
     /* deep shadow */
+}
+.b4b4b4{
+    color: #b4b4b4;
 }
 
 /* Floating Button Style */
@@ -74,7 +78,7 @@ body {
 /* Container Grid Layout */
 .container {
     display: grid;
-    grid-template-rows: auto repeat(6, 100vh) auto;
+    grid-template-rows: auto auto repeat(5, 100vh) auto;
     min-height: 100vh;
 }
 
@@ -182,8 +186,8 @@ body {
 .main-page .behind-image-bg {
     position: absolute;
     background-color: #12171d;
-    width: 360px;
-    height: 500px;
+    width: 330px;
+    height: 350px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -194,7 +198,7 @@ body {
 }
 
 .main-page-image {
-    width: 350px;
+    width: 270px;
     z-index: 1;
 }
 
@@ -461,6 +465,6 @@ body {
     border-radius: 10px;
     box-shadow: var(--primary-shadow);
 }
-.services{
+.skills{
     flex-direction: column;
 }
