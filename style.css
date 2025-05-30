@@ -395,8 +395,8 @@ body {
     .about-left, .about-right{
         flex:auto;
     }
-    .about-coverpic{
-        width: 30px;
+    .about-left .about-coverpic{
+        width: 40px;
     }
 }
 .section .header-section{
