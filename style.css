@@ -425,10 +425,6 @@ body {
         font-size: 14px;
     }
 
-    .soft-skills {
-        flex-direction: column;
-    }
-
     .card {
         border-radius: 8px;
     }
@@ -449,6 +445,7 @@ body {
     }
     .soft-skills{
         gap: 20px !important;
+        flex-direction: column;
     }
 }
 
@@ -534,6 +531,13 @@ body {
     margin-top: 30px;
     display: flex;
     gap: 30px;
+}
+
+.soft-skills-title{
+    text-align: center;
+    margin-top: 35px;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .skills .header-section {
