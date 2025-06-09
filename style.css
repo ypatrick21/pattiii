@@ -555,7 +555,7 @@ body {
 }
 
 .card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-1px);
     box-shadow: var(--primary-shadow);
 }
 
