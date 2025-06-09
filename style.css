@@ -409,6 +409,9 @@ body {
     .about-right {
         flex: auto;
     }
+    .about-right p{
+        text-align: center;
+    }
 
     .about-left .about-coverpic {
         width: 280px;
@@ -424,20 +427,29 @@ body {
 
     .skills-content {
         flex-direction: column;
-        gap: 10px;
     }
+
     .card {
-        margin: 10px;
         border-radius: 8px;
-      }
+    }
 
-      .card-title {
+    .card-title {
         font-size: 1.1rem;
-      }
+    }
 
-      .card-body {
+    .card-body {
         font-size: 0.9rem;
-      }
+    }
+
+    .skills .header-section {
+        text-align: center !important;
+    }
+    .skills{
+        padding: 1rem !important;
+    }
+    .skills-content{
+        gap: 20px !important;
+    }
 }
 
 .section .header-section {
@@ -494,6 +506,7 @@ body {
 }
 
 .about-right h2 {
+    margin-top: 15px;
     font-weight: 700;
     font-size: 30px;
 }
@@ -513,6 +526,7 @@ body {
 .skills {
     display: flex;
     flex-direction: column;
+    padding: 4rem;
 }
 
 .skills-content {
@@ -521,6 +535,7 @@ body {
     display: flex;
     gap: 30px;
 }
+
 .skills .header-section {
     text-align: unset;
 }
@@ -541,7 +556,7 @@ body {
 }
 
 .card-header {
-    padding: 16px 20px;
+    padding: 16px 15px;
     /* border-bottom: 1px solid #2f2f2f; */
 }
 
