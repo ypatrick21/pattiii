@@ -18,8 +18,41 @@ navItems.forEach(function (item) {
   });
 });
 
+//activate background color for navbar on scroll
+window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 10) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
 
+//back to top button functionality
 const backToTopButton = document.getElementById("backToTop");
+
+//activate navbar item if scrolled to specific section
+const sections = document.querySelectorAll('section');
+  const navLinksa = document.querySelectorAll('.nav-links a');
+
+  window.addEventListener('scroll', () => {
+    let currentSection = null;
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      if (pageYOffset >= sectionTop - 80) {
+        currentSection = section.getAttribute('id');
+      }
+    });
+
+    navLinksa.forEach(link => {
+      link.classList.remove('active');
+      if (currentSection && link.getAttribute('href') === `#${currentSection}`) {
+        link.classList.add('active');
+      }
+    });
+  });
 
 // Show/hide the button on scroll
 window.addEventListener("scroll", () => {
