@@ -459,7 +459,14 @@ body {
         gap: 20px !important;
         flex-direction: column;
     }
+    .card-image{
+        padding: 6rem !important;
+    }
+    .card-img-item {
+    width: 300px !important;
+    }
 }
+
 
 .section .header-section {
     text-align: center;
