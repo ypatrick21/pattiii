@@ -81,7 +81,7 @@ body {
 /* Container Grid Layout */
 .container {
     display: grid;
-    grid-template-rows: auto auto auto auto repeat(2, 100vh) auto;
+    grid-template-rows: repeat(7, auto);
     min-height: 100vh;
 }
 
@@ -283,7 +283,7 @@ body {
 
 @media only screen and (max-width:768px) {
     .container {
-        grid-template-rows: auto auto auto auto repeat(2, 100vh) auto;
+        grid-template-rows: repeat(7, auto);
     }
 
     .hamburger {
@@ -458,12 +458,13 @@ body {
     .soft-skills{
         gap: 20px !important;
         flex-direction: column;
+        align-items: center;
     }
     .card-image{
         padding: 6rem !important;
     }
     .card-img-item {
-    width: 300px !important;
+    width: 250px !important;
     }
 }
 
@@ -573,6 +574,13 @@ body {
     width: 100%;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+.card-project {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); */
+    width: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 .card-small{
     max-width: 400px;
 }
@@ -600,7 +608,7 @@ body {
 }
 
 .card-body {
-    padding: 20px;
+    padding: 0 20px 20px 20px;
     font-size: 0.95rem;
     color: #cccccc;
     line-height: 1.5;
@@ -662,8 +670,31 @@ body {
 .projects{
     flex-direction: column;
     padding-top: 4.5rem;
+    padding-bottom: 3rem !important;
 }
 .project-content{
     margin-top: 2rem;
     display: flex;
+    justify-content: center;
+}
+.project-tech{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    flex-direction: row;
+    margin-top: 1rem;
+    list-style: none;
+    justify-content: center;
+}
+.project-tech-item {
+    background-color: #111111;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    font-size: 0.9rem;
+    border: 1px solid #421723;
+}
+.contact{
+    padding-top: 5rem;
+    flex-direction: column;
 }
