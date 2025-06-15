@@ -189,8 +189,10 @@ body {
 .main-page .behind-image-bg {
     position: absolute;
     background-color: #12171d;
-    width: 330px;
-    height: 350px;
+    /* width: 330px;
+    height: 350px; */
+    width: 60%;
+    height: 80%;
     bottom: 0;
     left: 0;
     right: 0;
@@ -201,7 +203,9 @@ body {
 }
 
 .main-page-image {
-    width: 270px;
+    /* width: 270px; */
+    width: 50%;
+    height: auto;
     z-index: 1;
 }
 
