@@ -1,3 +1,11 @@
+:root {
+    --primary-color: #FF004F;
+    --main-background: #111111;
+    --text-white: #ffffff;
+    --primary-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2),
+        /* thin outline */
+        0 5px 10px rgba(113, 113, 113, 0.6);
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,18 +15,14 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #111111;
-    /* background-color: #1e1f21; */
-    --primary-color: #FF004F;
-    --main-background: #1B1F25;
-    --primary-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2),
-        /* thin outline */
-        0 5px 10px rgba(113, 113, 113, 0.6);
-    /* deep shadow */
+    background-color: var(--main-background);
 }
 
 .b4b4b4 {
     color: #b4b4b4;
+}
+button{
+    border: none;
 }
 
 /* Floating Button Style */
@@ -189,10 +193,8 @@ body {
 .main-page .behind-image-bg {
     position: absolute;
     background-color: #12171d;
-    /* width: 330px;
-    height: 350px; */
-    width: 60%;
-    height: 80%;
+    width: 330px;
+    height: 350px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -203,9 +205,7 @@ body {
 }
 
 .main-page-image {
-    /* width: 270px; */
-    width: 50%;
-    height: auto;
+    width: 270px;
     z-index: 1;
 }
 
@@ -255,7 +255,7 @@ body {
     border-radius: 5px;
 }
 
-.nav-btn {
+.primary-btn {
     text-decoration: none;
     color: #fff;
     background: linear-gradient(135deg, #ff004f, #ff416c);
@@ -269,7 +269,7 @@ body {
     overflow: hidden;
 }
 
-.nav-btn:hover {
+.primary-btn:hover {
     background: linear-gradient(135deg, #ff416c, #ff004f);
     box-shadow: 0 6px 20px rgba(255, 0, 79, 0.6);
     transform: scale(1.05);
@@ -279,10 +279,11 @@ body {
 
 /* Footer */
 .footer {
-    background: #222;
+    /* background: #222; */
     color: white;
     padding: 2rem;
     text-align: center;
+    font-size: 14px;
 }
 
 @media only screen and (max-width:768px) {
@@ -465,10 +466,14 @@ body {
         align-items: center;
     }
     .card-image{
-        padding: 6rem !important;
+        /* padding: 6rem !important; */
+        margin-top: 0px;
     }
     .card-img-item {
-    width: 250px !important;
+    width: 260px !important;
+    }
+    .contact-content{
+        flex-direction: column;
     }
 }
 
@@ -589,7 +594,7 @@ body {
     max-width: 400px;
 }
 .card-large{
-    max-width: 450px;
+    max-width: 400px;
 }
 
 .card:hover {
@@ -612,29 +617,32 @@ body {
 }
 
 .card-body {
-    padding: 0 20px 20px 20px;
+    padding: 0 20px 15px 15px;
     font-size: 0.95rem;
     color: #cccccc;
     line-height: 1.5;
 }
 .card-image{
     position: relative;
-    padding: 7rem;
-    margin: 15px;
+    padding: 4rem 0rem;
+    margin-top: 20px;
     border-radius: 8px;
-    background-color: #f43a09;
+    /* background-color: #f43a09; */
 }
 .card-img-item {
     position: absolute;
     width: 360px;
-    border-radius: 8px 8px 0 0;
+    border-radius: 8px;
     bottom: 0;
     left: 50%;
     right: 50%;
     transform: translateX(-50%);
 }
-.gfdsxfb{
-    text-align: center;
+.card-footer{
+    padding: 10px 15px 15px 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
 }
 .tech-stacks{
     max-width: 1024px;
@@ -681,24 +689,102 @@ body {
     display: flex;
     justify-content: center;
 }
-.project-tech{
+.contact{
+    padding: 5rem .5rem;
+    flex-direction: column;
+}
+.contact-content{
+    margin-top: 2rem;
     display: flex;
-    flex-wrap: wrap;
-    gap: .5rem;
-    flex-direction: row;
-    margin-top: 1rem;
-    list-style: none;
+    gap: 20px;
     justify-content: center;
 }
-.project-tech-item {
-    background-color: #111111;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    color: #ffffff;
-    font-size: 0.9rem;
-    border: 1px solid #421723;
-}
-.contact{
-    padding-top: 5rem;
+.contact-left, .contact-right{
+    flex: 1;
+    display: flex;
     flex-direction: column;
+    gap: 20px;
+}
+.contact-right{
+    text-align: center;
+}
+.contact-form{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/* From Uiverse.io by Satwinder04 */ 
+/* Input container */
+.input-container {
+  position: relative;
+  margin: 20px;
+}
+
+/* Input field */
+.input-field {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  color: #ccc;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  background-color: transparent;
+}
+
+/* Input label */
+.input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  color: rgba(204, 204, 204, 0);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Input highlight */
+.input-highlight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+/* Input field:focus styles */
+.input-field:focus + .input-label {
+  top: -20px;
+  font-size: 12px;
+  color: var(--primary-color);
+}
+
+.input-field:focus + .input-label + .input-highlight {
+  width: 100%;
+}
+.contact-links{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+.contact-link-item{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.contact-link-icon{
+    width: 35px;
+    background-color: #eee;
+    padding: 5px;
+    border-radius: 5px;
 }
