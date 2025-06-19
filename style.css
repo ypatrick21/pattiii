@@ -193,8 +193,8 @@ button{
 .main-page .behind-image-bg {
     position: absolute;
     background-color: #12171d;
-    width: 330px;
-    height: 350px;
+    width: 60%;
+    height: 85%;
     bottom: 0;
     left: 0;
     right: 0;
@@ -205,7 +205,7 @@ button{
 }
 
 .main-page-image {
-    width: 270px;
+    width: 50%;
     z-index: 1;
 }
 
