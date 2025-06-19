@@ -194,7 +194,7 @@ button{
     position: absolute;
     background-color: #12171d;
     width: 60%;
-    height: 85%;
+    height: 80%;
     bottom: 0;
     left: 0;
     right: 0;
@@ -469,6 +469,9 @@ button{
         /* padding: 6rem !important; */
         margin-top: 0px;
     }
+    .contact{
+        padding: 5rem .5rem !important;
+    }
     .card-img-item {
     width: 260px !important;
     }
@@ -692,7 +695,7 @@ button{
     flex-wrap: wrap;
 }
 .contact{
-    padding: 5rem .5rem;
+    padding: 5rem;
     flex-direction: column;
 }
 .contact-content{
